@@ -1,0 +1,284 @@
+:root {
+  --accent: #4a4e91;
+  --accent-light: #6c70c4;
+  --light: #f9f9f9;
+  --dark: #222;
+}
+
+/* Inclut padding et border dans la largeur */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bloque tout scroll horizontal global */
+html, body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
+/* Header */
+header {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.photo-profil {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.boutons-header .btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: white;
+  color: var(--accent);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.boutons-header .btn:hover {
+  background: var(--accent-light);
+  color: white;
+}
+
+/* Navigation */
+nav {
+  background: var(--dark);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--accent-light);
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Grilles et cartes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Cartes projets / screenshots */
+.card, .screenshot-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effets cartes */
+.card:hover, .screenshot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Images dans cartes */
+.card img, .screenshot-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem auto;
+  object-fit: contain;
+}
+.card img:hover, .screenshot-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Boutons projets */
+.btn-projet {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn-projet:hover {
+  background: var(--accent-light);
+}
+
+/* Compétences */
+#competences ul {
+  list-style: none;
+  padding: 0;
+}
+#competences li {
+  background: #eee;
+  display: inline-block;
+  margin: 0.3rem 0.5rem 0.3rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Formulaire contact */
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+.contact-form button {
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 600;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: var(--accent-light);
+}
+
+/* Liens contact */
+.liens-contact a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: 0.3s;
+}
+.liens-contact a:hover {
+  color: var(--accent-light);
+}
+
+/* Pied de page */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === Carrousels : images centrées et taille limitée === */
+.carousel-inner {
+  max-height: 300px;
+}
+
+.carousel-inner img {
+  object-fit: cover;   /* remplissage complet */
+  height: 300px;       /* hauteur uniforme */
+  width: 100%;         /* largeur pleine */
+}
+.screenshots { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.screenshot-card {
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* image en haut, bouton en bas */
+  align-items: center;
+  overflow: hidden;
+  height: auto;
+}
+
+.screenshot-card img {
+  max-height: 120px;  /* hauteur uniforme pour toutes les images */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.screenshot-card img:hover {
+  transform: scale(1.05);
+}
+
+.screenshot-card button {
+  width: auto;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .screenshot-card img {
+    max-height: 100px;
+  }
+}
+
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .card, .screenshot-card {
+    padding: 0.8rem;
+  }
+  .btn-projet {
+    width: 100%;
+  }
+  .carousel-inner img {
+    height: 200px; /* hauteur réduite sur mobile */
+  }
+}
