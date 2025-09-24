@@ -18,7 +18,17 @@
     <h1>BACHIR NABIL</h1>
     <p>Développeur Full Stack | Java Spring Boot & Laravel</p>
     <div class="boutons-header">
-      <a href="assets/CV.pdf" class="btn">Télécharger mon CV</a>
+     <!-- Bouton principal : téléchargement direct si possible -->
+<a href="assets/CV.pdf" class="btn" download="CV_Bachir_Nabil.pdf">
+  Télécharger mon CV
+</a>
+
+<!-- Bouton alternatif pour mobiles si le téléchargement direct est bloqué -->
+<a href="assets/CV.pdf" class="btn d-none d-md-inline" target="_blank">
+  Ouvrir le CV
+</a>
+
+
       <a href="#contact" class="btn">Me contacter</a>
     </div>
   </header>
