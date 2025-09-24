@@ -43,7 +43,6 @@ header p {
   margin-bottom: 1rem;
 }
 .boutons-header .btn {
-  display: inline-block;
   margin: 0.5rem;
   padding: 0.6rem 1.2rem;
   background: white;
@@ -53,6 +52,7 @@ header p {
   font-weight: 600;
   transition: 0.3s;
 }
+
 .boutons-header .btn:hover {
   background: var(--accent-light);
   color: white;
